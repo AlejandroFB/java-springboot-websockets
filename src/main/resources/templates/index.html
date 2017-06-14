@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <title>Mancala Game</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/mancala.css"/>
+    </head>
+
+    <body ng-app="mancala" class="ng-cloak">
+        <h1>Mancala</h1>
+
+        <div class="board">
+            <div class="player-two store">0</div>
+
+            <div class="rows">
+                <div class="row player-two">
+                    <div class="pit">6</div>
+                    <div class="pit">6</div>
+                    <div class="pit">6</div>
+                    <div class="pit">6</div>
+                    <div class="pit">6</div>
+                    <div class="pit">6</div>
+                </div>
+
+                <div class="row player-one">
+                    <div class="pit" ng-click="sowStones(0)" ng-model="pit0">6</div>
+                    <div class="pit" ng-click="sowStones(1)" ng-model="pit1">6</div>
+                    <div class="pit" ng-click="sowStones(2)" ng-model="pit2">6</div>
+                    <div class="pit" ng-click="sowStones(3)" ng-model="pit3">6</div>
+                    <div class="pit" ng-click="sowStones(4)" ng-model="pit4">6</div>
+                    <div class="pit" ng-click="sowStones(5)" ng-model="pit5">6</div>
+                </div>
+            </div>
+
+            <div class="player-one store">0</div>
+        </div>
+
+        <p class="status" ng-bind="player"></p>
+        <p class="status" ng-bind="playerStatus"></p>
+
+        <!-- Placed at the end of the document so the page load faster -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
+
+        <script type='text/javascript' src='js/mancala.js'></script>
+        <script type='text/javascript' src='js/gameService.js'></script>
+    </body>
+</html>
